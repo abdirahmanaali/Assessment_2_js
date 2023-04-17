@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+let pizza = {
+    name: "sandwich ",
+    price: 6,
+    category: "appetizer",
+    popularity: 6,
+    rating:9,
+    tags: ["healthy", "gluten-free"],
+  };
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+let { price } = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+let { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +97,48 @@
 */
 
 //CODE HERE
-
+let foodArr = [
+    {
+      name: "french fries",
+      price: 6,
+      category: "appetizers",
+      popularity: 8,
+      rating: 8,
+      tags: ["unhealthy", "fat", "tasty"],
+    },
+    {
+      name: "caesar salad",
+      price: 15,
+      category: "appetizers",
+      popularity: 6,
+      rating: 7,
+      tags: ["healthy", "low carbs", "gluten free",],
+    },
+    {
+      name: "tres leches",
+      price: 8,
+      category: "appetizers",
+      popularity: 10,
+      rating: 8,
+      tags: ["bakery","sweet", "high fat", "unhealthy"],
+    },
+    {
+      name: "burrito",
+      price: 10,
+      category: "entree",
+      popularity: 10,
+      rating: 9,
+      tags: ["protein", "fat free", "stuffed", "healthy"],
+    },
+    {
+      name: "shawarma",
+      price: 6,
+      category: "entree",
+      popularity: 7,
+      rating: 7,
+      tags: ["wrap", "gyro", "middle eastern", "healthy"],
+    },
+  ];
 
 
 //////////////////PROBLEM 4////////////////////
@@ -104,9 +154,10 @@
 */
 
 //CODE HERE
+const filteredFood = foodArr.filter((food) => food.tags.includes("unhealthy"));
+console.log(filteredFood)
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
 
 
 //////////////////PROBLEM 5////////////////////
@@ -149,7 +200,18 @@
 */
 
 //CODE HERE
+function filterByProperty(property, number, type) {
 
+    let filteredArr = [];
+  
+    if (type === "above") {
+      filteredArr = foodArr.filter((food) => food[property] >= number);
+    } else if (type === "below") {
+      filteredArr = foodArr.filter((food) => food[property] <= number);
+    }
+  
+    return filteredArr;
+  }
 
 /*
     Invoke the `filterByProperty` function passing
@@ -159,3 +221,4 @@
 */
 
 //CODE HERE
+console.log(filterByProperty("rating", 7, "below"));

@@ -34,7 +34,9 @@ const cart = [
 ]
 
 //CODE HERE
-const sumCart = cart.reduce((acc, curr) => acc + curr) // const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, sum) => acc + sum.price, 0);
+console.log(summedPrice);
+// const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -53,7 +55,10 @@ const sumCart = cart.reduce((acc, curr) => acc + curr) // const summedPrice = ca
 */
 
 //CODE HERE
-
+const calcFinalPrice =  (cartTotal, couponValue, tax) => {
+  let afterTax = cartTotal + cartTotal * tax;
+  return afterTax - couponValue;
+};
 
 
 //////////////////PROBLEM 3////////////////////
@@ -77,7 +82,9 @@ const sumCart = cart.reduce((acc, curr) => acc + curr) // const summedPrice = ca
 */
 
 /*
-    TEXT ANSWER HERE
+    TEXT ANSWER HERE:  
+    
+    if its restrauant with bar they will ask you date of birth, name, phone, and payment information. date of birth will an integer, and the rest will strings
 
 */
 
@@ -87,3 +94,9 @@ const sumCart = cart.reduce((acc, curr) => acc + curr) // const summedPrice = ca
 */
 
 //CODE HERE
+const customer = {
+    name: "Steve Adam",
+    phone: "123-456-7890",
+    birthDate: 1945 ,
+    paymentInformation: 7657
+    };

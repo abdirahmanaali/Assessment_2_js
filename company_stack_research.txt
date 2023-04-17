@@ -1,0 +1,42 @@
+Uber 
+
+Database
+
+Uber for their database uses Casandra for their high availability and performance and, MySQL for more structured queries. 
+
+Cloud
+AWS
+
+Languages
+Node.js
+Java for its high performance and its ability to take advantage on the open source ecosystem
+Go for it is quick, easy, and runtime efficient.
+Tornado with Python 
+C and C++ for writing tools but they don’t often work with them. 
+
+Frontend 
+React for web app, Java for Android and, Swift for Ios
+
+Engineering Blogs
+
+https://www.uber.com/blog/tech-stack-part-one-foundation/
+https://www.uber.com/blog/uber-tech-stack-part-two/
+
+
+Airbnb 
+
+Languages
+Java, Ruby, Javascript
+Ruby on Rails is used for framework due to its efficiency and low cost.
+They prefer React for their JavaScript framework because of its adaptable and effective solution interfaces.
+For Cloud hosting they use Amazon EC2 and for cloud database is MySQL and AWS
+
+
+Asana 
+
+Languages 
+JavaScript, Python, Java 
+They have a built-in persistence layer called OKVStore that is powered by MySQL.
+They extract dozens of components for their teams using the React framework.
+For mobile apps they’re written in Swift & Kotlin
+They created a custom Scala company service called LunaDb just like GraphQL
